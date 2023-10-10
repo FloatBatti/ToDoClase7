@@ -1,0 +1,7 @@
+.tasks{
+  display: flex;
+}
+
+app-add-task{
+  margin-left: 50px;
+}

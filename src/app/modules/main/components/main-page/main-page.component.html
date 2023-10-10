@@ -1,0 +1,10 @@
+<app-nav-bar [isUser]="true"></app-nav-bar>
+
+<div class="tasks">
+
+  <app-tasks-view [tasks]="tasks" (taskToDelete)="deleteTask($event)"></app-tasks-view>
+
+  <app-add-task (onNewTask)="addTask($event)"></app-add-task>
+
+</div>
+

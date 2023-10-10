@@ -1,0 +1,60 @@
+{
+  "tasks": [
+    {
+      "id": 2,
+      "priority": 6,
+      "description": "asdasdasd",
+      "done": false
+    },
+    {
+      "id": 4,
+      "priority": 7,
+      "description": "asdasdsad",
+      "done": false
+    },
+    {
+      "id": 5,
+      "priority": 2,
+      "description": "dasdasd",
+      "done": false
+    },
+    {
+      "id": 6,
+      "priority": 2,
+      "description": "dasdasdaasd",
+      "done": false
+    },
+    {
+      "id": 7,
+      "priority": 9,
+      "description": "dasdasdaasd",
+      "done": false
+    },
+    {
+      "id": 8,
+      "priority": 1,
+      "description": "dasdasdaasd",
+      "done": false
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123"
+    },
+    {
+      "id": 2,
+      "userName": "pepito",
+      "email": "pepito@gmail.com",
+      "password": "pepito123"
+    },
+    {
+      "userName": "userTestLunes",
+      "email": "userTest@gmail.com",
+      "password": "userTest12345",
+      "id": 3
+    }
+  ]
+}

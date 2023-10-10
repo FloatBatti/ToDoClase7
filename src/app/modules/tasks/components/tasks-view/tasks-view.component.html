@@ -1,0 +1,26 @@
+<div>
+  <h2>Tareas</h2>
+
+  <!-- Lista de tareas ordenadas por prioridad -->
+    <table style="text-align: center;" border="1">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Priority</th>
+          <th>Description</th>
+          <th>Done</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.id }}</td>
+          <td>{{ task.priority }}</td>
+          <td>{{ task.description }}</td>
+          <td>{{ task.done }}</td>
+          <td><button (click)="deleteTask(task.id!)">X</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
