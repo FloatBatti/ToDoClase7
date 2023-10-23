@@ -5,6 +5,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { TasksModule } from '@modules/tasks/tasks.module';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { SharedModule } from '@shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SharedModule } from '@shared/shared.module';
     CommonModule,
     MainRoutingModule,
     TasksModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class MainModule { }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Task } from '@core/Models';
 import { ApiService } from '@core/services/api.service';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,16 +36,22 @@ export class TasksService {
 
   }
 
-  public updateTask(task: Task): Task | null {
+  public async updateTask(task: Task): Promise<Task | null> {
 
-    let resp: Task = new Task();
+    let resp: Task | null = null;
 
-    this.apiService.updateTask(task).subscribe({
-      next: (data) => { resp = data },
-      error: (error) => { throw error }
-    })
+    try{
+
+      const apiResponse = this.apiService.updateTask(task);
+      resp = await lastValueFrom(apiResponse);
+
+    }catch(error){
+
+      throw error;
+    }
 
     return resp;
+
   }
 
   public deleteTask(id: number): Promise<boolean> {

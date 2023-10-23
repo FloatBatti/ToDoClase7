@@ -10,6 +10,7 @@
           <th>Description</th>
           <th>Done</th>
           <th>Delete</th>
+          <th>Edit</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +20,7 @@
           <td>{{ task.description }}</td>
           <td>{{ task.done }}</td>
           <td><button (click)="deleteTask(task.id!)">X</button></td>
+          <td><button (click)="updateTask(task!)">E</button></td>
         </tr>
       </tbody>
     </table>

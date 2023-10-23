@@ -1,21 +1,9 @@
 {
   "tasks": [
     {
-      "id": 10,
-      "priority": 4,
-      "description": "sadasdasd",
-      "done": false
-    },
-    {
-      "id": 11,
-      "priority": 5,
-      "description": "sadasdasd",
-      "done": false
-    },
-    {
-      "id": 12,
-      "priority": 3,
-      "description": "sadasdasd",
+      "id": 1,
+      "priority": 1,
+      "description": "Tarea 1 asdasd",
       "done": false
     }
   ],
