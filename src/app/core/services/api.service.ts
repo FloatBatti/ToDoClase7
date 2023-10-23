@@ -55,7 +55,7 @@ export class ApiService {
   //! Users
 
   public getToAuth(email: string, password: string): Observable<User[]> {
-    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`)
+    return this.http.get<User[]>(`${this.baseURL}/users?email=${email}&password=${password}`);
   }
 
   /* Ejemplo de como trasnformar la respuesta de la api */

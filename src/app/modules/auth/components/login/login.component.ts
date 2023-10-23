@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '@core/Models';
-import { AuthService } from '@modules/auth/services/auth.service';
+import { AuthService } from '@core/services/autServices/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,9 +13,7 @@ export class LoginComponent {
 
   private email: string = '';
 
-  public user: User = new User({
-    "id":4
-  })
+  public user: User | null = null;
 
 
   private emailPattern: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -67,9 +65,9 @@ export class LoginComponent {
 
     try {
 
-      let user: User | undefined = await this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
+      let isLogin: boolean = await this.authService.login(this.loginForm.value.email, this.loginForm.value.password);
 
-      if (user) {
+      if (isLogin) {
         this.router.navigate(["/main"]);
       }
       else {
